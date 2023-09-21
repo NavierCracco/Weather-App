@@ -4,13 +4,13 @@ import axios from "axios";
 
 const dataContext = createContext();
 
-const API_WEATHER = `https://api.weatherapi.com/v1/current.json?key=${
-  import.meta.env.VITE_API_KEY
-}&q=sauce%20viejo&aqi=no`;
+// const API_WEATHER = `https://api.weatherapi.com/v1/current.json?key=${
+//   import.meta.env.VITE_API_KEY
+// }&q=sauce%20viejo&aqi=no`;
 
-const WEEK_API_WEATHER = `https://api.weatherapi.com/v1/forecast.json?key=${
-  import.meta.env.VITE_API_KEY
-}&q=sauce%20viejo&days=7&aqi=no&alerts=no`;
+// const WEEK_API_WEATHER = `https://api.weatherapi.com/v1/forecast.json?key=${
+//   import.meta.env.VITE_API_KEY
+// }&q=sauce%20viejo&days=7&aqi=no&alerts=no`;
 
 const DataProvider = ({ children }) => {
   const [apiData, setApiData] = useState(null);
@@ -18,7 +18,11 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get(API_WEATHER)
+      .get(
+        `https://api.weatherapi.com/v1/current.json?key=${
+          import.meta.env.VITE_API_KEY
+        }&q=sauce%20viejo&aqi=no`
+      )
       .then((response) => {
         setApiData(response.data);
       })
@@ -28,7 +32,11 @@ const DataProvider = ({ children }) => {
   useEffect(() => {
     const getWeatherForescast = () => {
       axios
-        .get(WEEK_API_WEATHER)
+        .get(
+          `https://api.weatherapi.com/v1/forecast.json?key=${
+            import.meta.env.VITE_API_KEY
+          }&q=sauce%20viejo&days=7&aqi=no&alerts=no`
+        )
         .then((response) => {
           setWeekData(response.data);
         })
