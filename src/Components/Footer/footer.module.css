@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .footer .containerFooter {
@@ -15,4 +17,8 @@
 .footer .containerFooter .name {
   font-weight: 600;
   text-decoration: underline;
+}
+
+.footer .link {
+  padding-bottom: 1rem;
 }

@@ -7,7 +7,11 @@ function Footer() {
         <p>Created by </p>
         <p className={styles.name}> Navier Cracco</p>
       </div>
-      <a href="https://www.weatherapi.com/" title="Weather API">
+      <a
+        className={styles.link}
+        href="https://www.weatherapi.com/"
+        title="Weather API"
+      >
         WeatherAPI.com
       </a>
     </div>
