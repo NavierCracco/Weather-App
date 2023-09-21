@@ -1,0 +1,31 @@
+.wrapper {
+  background-color: var(--clr-two);
+}
+
+.wrapper .containerWeek {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  min-height: 100vh;
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.wrapper .containerInfoDay {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 1.5rem;
+}
+
+.wrapper .containerInfoDay .titleDayInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
+  padding-bottom: 1rem;
+}

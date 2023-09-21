@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--clr-two);
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .containerFooter {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.footer .containerFooter .name {
+  font-weight: 600;
+  text-decoration: underline;
+}

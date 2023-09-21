@@ -1,0 +1,59 @@
+.main {
+  background-color: var(--clr-main);
+  min-height: 100vh;
+}
+
+.main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.main .container .iconClima {
+  width: 7rem;
+}
+
+.main .container .containerTemp {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.main .container .containerTemp .temp {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.main .container .containerTemp .celsius {
+  color: var(--clr-grayTwo);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.main .container .climaText {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--clr-grayTwo);
+}
+
+.main .container .containerData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.main .container .containerData .data {
+  color: var(--clr-grayOne);
+  font-weight: 600;
+}
+
+.main .container .containerData .location {
+  color: var(--clr-grayOne);
+  font-weight: 600;
+}

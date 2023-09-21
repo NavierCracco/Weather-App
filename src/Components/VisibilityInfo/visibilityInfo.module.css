@@ -1,0 +1,63 @@
+.cardContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.card {
+  position: relative;
+  width: 90vw;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.visibility {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgb(197, 197, 197);
+}
+.visibilityContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.visibilityContainer .visibilityValue {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: white;
+  padding-bottom: 4rem;
+}
+
+.visibilityContainer span {
+  padding-bottom: 4rem;
+}
+
+.cardContainer::before {
+  width: 6rem;
+  height: 6rem;
+  content: "";
+  position: absolute;
+  left: 220px;
+  top: 40px;
+  background-color: rgb(144, 161, 255);
+  z-index: -1;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.cardContainer:hover::before {
+  transform: translate(-160px, 70px);
+}
