@@ -10,9 +10,6 @@ import styles from "./weatherInfo.module.css";
 function WeatherInfo() {
   const { weekData } = useContext(dataContext);
 
-  const currentDate = new Date();
-  const tomorrowDate = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.containerWeek}>
@@ -22,20 +19,18 @@ function WeatherInfo() {
             weekday: "long",
           });
 
-          if (date >= tomorrowDate) {
-            return (
-              <Card
-                key={day.date}
-                date={dayName}
-                day={day.day}
-                avgTemp={day.day.avgtemp_c}
-                maxTemp={day.day.maxtemp_c}
-                minTemp={day.day.mintemp_c}
-                icon={day.day.condition.icon}
-                weather={day.day.condition.text}
-              />
-            );
-          }
+          return (
+            <Card
+              key={day.date}
+              date={dayName}
+              day={day.day}
+              avgTemp={day.day.avgtemp_c}
+              maxTemp={day.day.maxtemp_c}
+              minTemp={day.day.mintemp_c}
+              icon={day.day.condition.icon}
+              weather={day.day.condition.text}
+            />
+          );
         })}
       </div>
       <div className={styles.containerInfoDay}>

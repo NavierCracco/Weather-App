@@ -31,7 +31,7 @@ const DataProvider = ({ children }) => {
     const getWeatherForescast = () => {
       axios
         .get(
-          `https://api.weatherapi.com/v1/forecast.json?key=f211e731ec814345832134256232009&q=sauce%20viejo&days=7&aqi=no&alerts=no`
+          `https://api.weatherapi.com/v1/forecast.json?key=f211e731ec814345832134256232009&q=sauce%20viejo&days=3&aqi=no&alerts=no`
         )
         .then((response) => {
           setWeekData(response.data);
