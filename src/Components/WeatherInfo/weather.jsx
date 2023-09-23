@@ -8,12 +8,12 @@ import AirPressureInfo from "../AirPressureInfo/airPressure";
 import styles from "./weatherInfo.module.css";
 
 function WeatherInfo() {
-  const { weekData } = useContext(dataContext);
+  const { apiData } = useContext(dataContext);
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.containerWeek}>
-        {weekData?.forecast?.forecastday.map((day) => {
+        {apiData?.forecast?.forecastday.map((day) => {
           const date = new Date(day.date);
           const dayName = date.toLocaleDateString("en", {
             weekday: "long",

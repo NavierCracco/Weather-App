@@ -17,7 +17,6 @@ function Home() {
 
   const locationName = apiData?.location?.name;
   const locationRegion = apiData?.location?.region;
-
   return (
     <main className={styles.main}>
       <div className={styles.container}>
