@@ -57,3 +57,24 @@
   color: var(--clr-grayOne);
   font-weight: 600;
 }
+
+/**  css si apiData es null **/
+
+.main .containerNull {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.main .containerNull .titleEnterCity {
+  padding: 1rem;
+  background-color: var(--clr-two);
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.main .containerNull .titleEnterCity .iconEnterCity {
+  font-size: 1.5rem;
+}

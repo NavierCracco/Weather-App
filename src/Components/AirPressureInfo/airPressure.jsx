@@ -10,10 +10,10 @@ function AirPressureInfo() {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <p className={styles.airPressure}>Air Pressure</p>
+        <p className={styles.airPressure}>Presión atmosférica</p>
         <div className={styles.airPressureContainer}>
           <p className={styles.airPressureValue}>{pressure}</p>
-          <span>mb</span>
+          <span>hPa</span>
         </div>
       </div>
     </div>

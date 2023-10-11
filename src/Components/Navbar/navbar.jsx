@@ -1,29 +1,20 @@
 import { useState } from "react";
+import { useContext } from "react";
 import { BiSearch } from "react-icons/bi";
 import styles from "./navbar.module.css";
-import axios from "axios";
+import { dataContext } from "../../DataContext/dataContext";
 
 function Navbar() {
-  const [searchValue, setSearchValue] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const { fetchWeather } = useContext(dataContext);
+  const [inputValue, setInputValue] = useState("");
 
   const handleSearch = (e) => {
-    setSearchValue(e.target.value);
+    setInputValue(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    axios
-      .get(
-        `https://api.weatherapi.com/v1/current.json?key=${
-          import.meta.env.VITE_API_KEY
-        }&q=${searchValue}&aqi=no`
-      )
-      .then((response) => {
-        setSearchResults(response.data);
-      })
-      .catch((err) => console.error(err));
+    fetchWeather(inputValue);
   };
 
   return (
@@ -32,25 +23,18 @@ function Navbar() {
         <div className={styles.containerSearch}>
           <input
             className={styles.input}
-            placeholder="City"
+            placeholder="Ciudad"
             type="search"
             required
-            value={searchValue}
+            value={inputValue}
             onChange={handleSearch}
           />
-          <button className={styles.button}>
+          <button className={styles.button} type="submit">
             {" "}
             <BiSearch />
           </button>
         </div>
       </form>
-      {searchResults.length > 0 && (
-        <ul>
-          {searchResults.map((result) => (
-            <li key={result.location.name}>{result.location.name}</li>
-          ))}
-        </ul>
-      )}
     </nav>
   );
 }

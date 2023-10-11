@@ -10,7 +10,7 @@ function VisibilityInfo() {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <p className={styles.visibility}>visiblity</p>
+        <p className={styles.visibility}>visibilidad</p>
         <div className={styles.visibilityContainer}>
           <p className={styles.visibilityValue}>{visibility}</p>
           <span>km</span>

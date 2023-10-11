@@ -10,7 +10,7 @@ function HumidityInfo() {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <p className={styles.humidity}>Humidity</p>
+        <p className={styles.humidity}>Humedad</p>
         <div className={styles.humidityContainer}>
           <p className={styles.humidityValue}>{humidity}</p>
           <span>%</span>

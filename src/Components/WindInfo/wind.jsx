@@ -11,7 +11,7 @@ function WindInfo() {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <p className={styles.windStatus}>Wind Status</p>
+        <p className={styles.windStatus}>Estado del viento</p>
         <div className={styles.windContainer}>
           <p className={styles.wind}>{wind}</p>
           <span>km/h</span>

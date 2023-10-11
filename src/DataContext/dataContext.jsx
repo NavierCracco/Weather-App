@@ -1,27 +1,33 @@
 import { PropTypes } from "prop-types";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import axios from "axios";
 
 const dataContext = createContext();
 
-const API_WEATHER = `https://api.weatherapi.com/v1/forecast.json?key=${
-  import.meta.env.VITE_API_KEY
-}&q=sauce%20viejo&days=7&aqi=no&alerts=no`;
-
 const DataProvider = ({ children }) => {
   const [apiData, setApiData] = useState(null);
+  const [searchValue, setSearchValue] = useState("");
 
-  useEffect(() => {
+  const fetchWeather = (city) => {
+    const codifiedCity = encodeURIComponent(city);
+    const API_WEATHER = `https://api.weatherapi.com/v1/forecast.json?key=${
+      import.meta.env.VITE_API_KEY
+    }&q=${codifiedCity}&days=7&aqi=no&alerts=no&lang=es`;
+
     axios
       .get(API_WEATHER)
       .then((response) => {
         setApiData(response.data);
       })
       .catch((err) => console.error(err));
-  }, []);
+  };
 
   return (
-    <dataContext.Provider value={{ apiData }}>{children}</dataContext.Provider>
+    <dataContext.Provider
+      value={{ apiData, searchValue, setSearchValue, fetchWeather }}
+    >
+      {children}
+    </dataContext.Provider>
   );
 };
 
