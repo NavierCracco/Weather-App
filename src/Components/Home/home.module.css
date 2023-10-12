@@ -12,8 +12,16 @@
   padding-bottom: 3rem;
 }
 
+.main .container .containerNavbarInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main .container .iconClima {
-  width: 7rem;
+  width: 9rem;
+  max-height: 9rem;
 }
 
 .main .container .containerTemp {
@@ -23,7 +31,7 @@
 }
 
 .main .container .containerTemp .temp {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
@@ -35,9 +43,29 @@
 }
 
 .main .container .climaText {
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
   color: var(--clr-grayTwo);
+}
+
+.main .container .containerMaxMin {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  gap: 1rem;
+}
+
+.main .container .containerFeelsLike {
+  background-color: var(--clr-two);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  width: 90%;
+}
+.main .container .feelsLike {
+  font-size: 0.8rem;
 }
 
 .main .container .containerData {
@@ -51,11 +79,21 @@
 .main .container .containerData .data {
   color: var(--clr-grayOne);
   font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .main .container .containerData .location {
   color: var(--clr-grayOne);
   font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.main .container .containerTempIcon {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /**  css si apiData es null **/

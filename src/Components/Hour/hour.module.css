@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10rem;
+}
+
+.container .hour {
+  font-size: 0.8rem;
+}
+
+.container .tempContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.container .tempContainer .icon {
+  width: 4rem;
+}
+
+.container .humidityContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.1rem;
+}
+
+.container .humidityContainer .humidityIcon {
+  font-size: 0.7rem;
+  color: var(--clr-grayOne);
+}
+.container .humidityContainer .humidity {
+  font-size: 0.7rem;
+  color: var(--clr-grayOne);
+}
