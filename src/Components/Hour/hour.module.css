@@ -17,6 +17,10 @@
   padding-bottom: 1rem;
 }
 
+.container .tempContainer .temp {
+  font-weight: 500;
+}
+
 .container .tempContainer .icon {
   width: 4rem;
 }

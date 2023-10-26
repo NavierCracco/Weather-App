@@ -6,17 +6,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  min-height: 100vh;
   padding-left: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-right: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .wrapper .containerInfoDay {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   row-gap: 1.5rem;
 }
 

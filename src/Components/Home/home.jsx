@@ -3,15 +3,15 @@ import { dataContext } from "../../DataContext/dataContext";
 import { BiMap } from "react-icons/bi";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
+import WeatherInfo from "../WeatherInfo/weather.jsx";
 import Navbar from "../Navbar/navbar";
 import FeelsLike from "../MaxMin/maxMin";
 import Astro from "../Astro/astro";
-import styles from "./home.module.css";
 import Schedule from "../Schedule/schedule";
+import styles from "./home.module.css";
 
 function Home() {
   const { apiData } = useContext(dataContext);
-  console.log(apiData);
   const iconClima = apiData?.current?.condition?.icon;
 
   const temperature = apiData?.current?.temp_c;
@@ -82,6 +82,7 @@ function Home() {
             </span>
           </section>
         </div>
+        <WeatherInfo />
       </main>
     );
   }

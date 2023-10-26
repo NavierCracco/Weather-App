@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useContext } from "react";
+import { dataContext } from "../../DataContext/dataContext";
 import { BiSearch } from "react-icons/bi";
 import styles from "./navbar.module.css";
-import { dataContext } from "../../DataContext/dataContext";
 
 function Navbar() {
   const { fetchWeather } = useContext(dataContext);

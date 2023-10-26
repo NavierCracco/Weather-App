@@ -1,13 +1,11 @@
-import "./App.css";
 import Footer from "./Components/Footer/footer";
 import Home from "./Components/Home/home.jsx";
-import WeatherInfo from "./Components/WeatherInfo/weather.jsx";
+import "./App.css";
 
 function App() {
   return (
     <>
       <Home />
-      <WeatherInfo />
       <Footer />
     </>
   );

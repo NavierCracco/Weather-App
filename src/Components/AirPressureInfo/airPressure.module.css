@@ -44,20 +44,3 @@
 .airPressureContainer span {
   padding-bottom: 4rem;
 }
-
-.cardContainer::before {
-  width: 6rem;
-  height: 6rem;
-  content: "";
-  position: absolute;
-  left: 220px;
-  top: 40px;
-  background-color: rgb(144, 161, 255);
-  z-index: -1;
-  border-radius: 50%;
-  transition: all 1s;
-}
-
-.cardContainer:hover::before {
-  transform: translate(-160px, 70px);
-}

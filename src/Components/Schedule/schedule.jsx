@@ -8,7 +8,7 @@ function Schedule() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.scheduleText}>
-        <p>Horario</p>
+        <p>Por hora</p>
       </div>
       <section className={styles.container}>
         {apiData?.forecast?.forecastday[0]?.hour.map((hour) => {

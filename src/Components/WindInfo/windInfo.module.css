@@ -52,39 +52,3 @@
   display: flex;
   gap: 1rem;
 }
-
-.cardContainer::before {
-  width: 6rem;
-  height: 6rem;
-  content: "";
-  position: absolute;
-  left: 220px;
-  top: 40px;
-  background-color: rgb(144, 161, 255);
-  z-index: -1;
-  border-radius: 50%;
-  transition: all 1s;
-}
-
-.cardContainer:hover::before {
-  transform: translate(-160px, 70px);
-}
-
-#compass {
-  width: 20px;
-  height: 20px;
-  background-image: url("compass.png"); /* Replace with your own compass image */
-  position: relative;
-}
-
-#arrow {
-  width: 4px;
-  height: 8px;
-  background-color: red; /* Replace with your own arrow color */
-  position: absolute;
-  top: 40px;
-  left: 90px;
-  transform-origin: bottom center;
-  transform: rotate(0deg);
-  transition: transform 0.5s ease;
-}
