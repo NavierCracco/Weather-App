@@ -1,7 +1,7 @@
-<p align="center">
+<div align="center">
   <img src="./src/assets/favicon.ico" width="48" alt="Weather App Icon" style="vertical-align:middle;" />
-  <span style="font-size:2.2em; vertical-align:middle; font-weight:bold; margin-left: 10px;">Weather App</span>
-</p>
+  <h1 style="font-size:2.2em; vertical-align:middle; font-weight:bold; margin-left: 10px;">Weather App</h1>
+</div>
 
 <p align="center">
   Aplicación web para consultar el clima actual y pronóstico de tu ciudad favorita.
